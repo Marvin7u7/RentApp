@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_Inicio"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_Inicio" />
+        <item
+            android:id="@+id/nav_arrendatario"
+            android:icon="@drawable/ic_baseline_people_24"
+            android:title="@string/menu_arrendatario" />
+        <item
+            android:id="@+id/nav_usuario"
+            android:icon="@drawable/ic_baseline_verified_user_24"
+            android:title="@string/menu_usuario" />
+    </group>
+
+    <!-- Aqui podemos añadir distintos grupos pro medio de los id
+     de los fragment-->
+</menu>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">RentApp</string>
+    <string name="navigation_drawer_open">Abrir Navegacion drawer</string>
+    <string name="navigation_drawer_close">Cerrar Navegacion drawer</string>
+    <string name="nav_header_title">Nombre del Usuario</string>
+    <string name="nav_header_subtitle">correo@gmail.com</string>
+    <string name="nav_header_desc">Navegacion </string>
+    <string name="action_settings">Configuraciones</string>
+
+
+
+    <string name="menu_Inicio">Inicio</string>
+    <string name="menu_arrendatario">Arrendatario</string>
+    <string name="menu_usuario">Usuario</string>
+</resources>
