@@ -6,7 +6,7 @@
     <string name="nav_header_subtitle">correo@gmail.com</string>
     <string name="nav_header_desc">Navegacion </string>
     <string name="action_settings">Configuraciones</string>
-
+    <string name="ir_al">Ir al menu</string>
 
 
     <string name="menu_Inicio">Inicio</string>
