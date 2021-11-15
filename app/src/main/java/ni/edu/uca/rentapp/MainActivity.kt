@@ -16,11 +16,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnMemo.setOnClickListener(){
-            val intent = Intent(this,Marvin::class.java)
+        binding.btnIniciarSesion.setOnClickListener(){
+            val intent = Intent(this,Iniciar_sesion::class.java)
             startActivity(intent)
         }
 
+        binding.btnRegistrar.setOnClickListener(){
+            val intent = Intent(this, Registrar::class.java)
+            startActivity(intent)
+        }
 
        }
 }

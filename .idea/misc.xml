@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/activity_iniciar_sesion.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/activity_main.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/activity_registrar.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/editar_usuario_fragment.xml" value="0.17040358744394618" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/fragment_usuario.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Marvi/Desktop/DAMO/Oficial/app/src/main/res/drawable/side_nav_bar.xml" value="0.15833333333333333" />
         <entry key="..\:/Users/Marvi/Desktop/DAMO/Oficial/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Marvi/Desktop/DAMO/Oficial/app/src/main/res/layout/activity_marvin.xml" value="0.18795289855072464" />

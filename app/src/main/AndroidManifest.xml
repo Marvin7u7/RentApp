@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RentApp">
         <activity
+            android:name=".Registrar"
+            android:exported="false" />
+        <activity
+            android:name=".Iniciar_sesion"
+            android:exported="false" />
+        <activity
             android:name=".Marvin"
             android:exported="true" />
         <activity
