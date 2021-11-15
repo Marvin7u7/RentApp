@@ -23,7 +23,7 @@
                 android:layout_height="235dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="70dp"
-                tools:src="@tools:sample/avatars" />
+                android:background="@drawable/ic_baseline_photo_camera_24"/>
 
 
             <LinearLayout
@@ -148,6 +148,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20dp"
                 android:hint="Guardar Cambios"
                 app:cornerRadius="100dp"/>

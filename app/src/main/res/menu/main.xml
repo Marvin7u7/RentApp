@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <!--  <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+      <item
+          android:id="@+id/nav_editar_usuario"
+          android:orderInCategory="100"
+          android:title="@string/Editar"
+          app:showAsAction="never"/>
 
-  Aqui pues comentarie esto porque no se si lo usaaremos luego
+  <!--Aqui pues comentarie esto porque no se si lo usaaremos luego
 -->
 </menu>

@@ -3,14 +3,13 @@ package ni.edu.uca.rentapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.ui.*
 import ni.edu.uca.rentapp.databinding.ActivityMarvinBinding
 
 class Marvin : AppCompatActivity() {
@@ -19,7 +18,6 @@ class Marvin : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMarvinBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -51,5 +49,12 @@ class Marvin : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        when(item.itemId){
+            R.id.nav_editar_usuario -> item.onNavDestinationSelected(navController)
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }
 
