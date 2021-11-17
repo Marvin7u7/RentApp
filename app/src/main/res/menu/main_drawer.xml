@@ -9,9 +9,9 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_Inicio" />
         <item
-            android:id="@+id/nav_buscar"
+            android:id="@+id/nav_buscar_casa"
             android:icon="@drawable/ic_baseline_search"
-            android:title="@string/buscar"/>
+            android:title="@string/buscar_casa"/>
 
         <item
             android:id="@+id/nav_arrendatario"

@@ -31,13 +31,13 @@ class Marvin : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_Inicio, R.id.nav_arrendatario, R.id.nav_usuario
+                R.id.nav_Inicio, R.id.nav_buscar_casa, R.id.nav_arrendatario, R.id.nav_usuario
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
-
+    //Menu 3 puntos
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
@@ -48,7 +48,7 @@ class Marvin : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
+    //abrir fragment para el menu 3 puntos
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         when(item.itemId){
