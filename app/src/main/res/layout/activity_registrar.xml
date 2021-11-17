@@ -72,17 +72,6 @@
                 android:textAlignment="center"
                 android:textSize="25dp" />
 
-            <EditText
-                android:id="@+id/fechaNacimiento"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp"
-                android:hint="Fecha de nacimiento"
-                android:textAlignment="center"
-                android:textSize="25dp" />
-
             <RadioGroup
                 android:id="@+id/OpcionesUsuario"
                 android:layout_width="match_parent"

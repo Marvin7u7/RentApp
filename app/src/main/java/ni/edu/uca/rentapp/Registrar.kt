@@ -7,6 +7,7 @@ import ni.edu.uca.rentapp.databinding.ActivityRegistrarBinding
 
 class Registrar : AppCompatActivity() {
     private lateinit var binding : ActivityRegistrarBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegistrarBinding.inflate(layoutInflater)
