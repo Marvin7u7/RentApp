@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RentApp">
         <activity
+            android:name=".Arrendador"
+            android:exported="true" />
+        <activity
             android:name=".Registrar"
             android:exported="false" />
         <activity

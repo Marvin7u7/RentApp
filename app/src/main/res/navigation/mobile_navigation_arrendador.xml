@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_arrendador"
+    app:startDestination="@id/nav_i">
+
+    <fragment
+        android:id="@+id/nav_i"
+        android:name="ni.edu.uca.rentapp.Inmuebles"
+        android:label="Inmuebles"
+        tools:layout="@layout/inmuebles_fragment"/>
+    <fragment
+        android:id="@+id/nav_p"
+        android:name="ni.edu.uca.rentapp.MiPerfil"
+        android:label="Mi Perfil"
+        tools:layout="@layout/mi_perfil_fragment" />
+</navigation>

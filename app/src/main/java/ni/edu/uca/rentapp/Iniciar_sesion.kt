@@ -14,7 +14,7 @@ class Iniciar_sesion : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnIniciarSesion.setOnClickListener(){
-            val intent = Intent(this,Marvin::class.java)
+            val intent = Intent(this, Arrendador::class.java)
             startActivity(intent)
         }
     }

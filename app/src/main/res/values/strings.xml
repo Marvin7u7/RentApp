@@ -15,4 +15,6 @@
     <string name="Editar">Editar Perfil</string>
     <string name="buscar">Buscar</string>
     <string name="buscar_casa">Buscar Casa</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
