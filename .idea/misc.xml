@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/activity_arrendador.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/activity_iniciar_sesion.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/activity_main.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/activity_marvin.xml" value="0.20677083333333332" />
@@ -11,10 +12,15 @@
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/buscar_casa_fragment.xml" value="0.14349775784753363" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/content_main.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/editar_usuario_fragment.xml" value="0.17040358744394618" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/fragment_activity_main.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/fragment_inicio.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/fragment_login.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/fragment_registrar_usuario.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/fragment_usuario.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/nav_header_main.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/menu/main.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/menu/main_activity_drawer.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/menu/main_arrendador_drawer.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/menu/main_drawer.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/RentApp/app/src/main/res/layout/activity_registrar.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Dell/AndroidStudioProjects/RentApp/app/src/main/res/layout/editar_usuario_fragment.xml" value="0.36666666666666664" />
