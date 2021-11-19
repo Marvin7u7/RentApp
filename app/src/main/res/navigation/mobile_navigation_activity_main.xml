@@ -3,21 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation_activity_main"
-    app:startDestination="@id/nav_activity_main">
-
-    <fragment
-        android:id="@+id/nav_registrar_usuario"
-        android:name="ni.edu.uca.rentapp.registrar_usuario"
-        android:label="Registrar"
-        tools:layout="@layout/fragment_registrar_usuario" />
-    <fragment
-        android:id="@+id/nav_activity_main"
-        android:name="ni.edu.uca.rentapp.activity_main"
-        android:label="Inicio"
-        tools:layout="@layout/fragment_activity_main" />
+    app:startDestination="@id/nav_login">
     <fragment
         android:id="@+id/nav_login"
         android:name="ni.edu.uca.rentapp.Login"
-        android:label="Iniciar sesión"
-        tools:layout="@layout/fragment_login" />
+        android:label="Iniciar Sesión"
+        tools:layout="@layout/login_fragment" />
+    <fragment
+        android:id="@+id/nav_registrar_usuario"
+        android:name="ni.edu.uca.rentapp.RegistrarUsuario"
+        android:label="Registar"
+        tools:layout="@layout/registrar_usuario_fragment" />
 </navigation>
