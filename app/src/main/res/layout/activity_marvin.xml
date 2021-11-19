@@ -8,8 +8,8 @@
     tools:openDrawer="start">
 
      <include
-          android:id="@+id/app_bar_main"
-          layout="@layout/app_bar_main"
+          android:id="@+id/app_bar_main_arrendario"
+          layout="@layout/app_bar_main_arrendatario"
           android:layout_width="match_parent"
           android:layout_height="match_parent" />
 
@@ -19,8 +19,8 @@
           android:layout_height="match_parent"
           android:layout_gravity="start"
           android:fitsSystemWindows="true"
-          app:headerLayout="@layout/nav_header_main"
-          app:menu="@menu/main_drawer" />
+          app:headerLayout="@layout/nav_header_arrendatarioyarrendador"
+          app:menu="@menu/main_drawer"/>
 
     <!--ANuestro Main que tendra practicamente la informacion necesaria-->
 </androidx.drawerlayout.widget.DrawerLayout>
