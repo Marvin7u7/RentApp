@@ -2,15 +2,14 @@ package ni.edu.uca.rentapp.Entidades
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
-import androidx.room.Update
+import androidx.room.Query
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface usuarioDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertUser(usuario: Usuario)
+    suspend fun insertarUsuario(user: usuario)
 
-    @Update
-    suspend fun updateUser(usuario: Usuario)
-
-
+    @Query("SELECT * FROM tblUsuario WHERE email LIKE :emailI and password LIKE :passwordI")
+    fun loginUsuario(emailI:String, passwordI: String): usuario
 }
