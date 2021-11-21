@@ -9,9 +9,11 @@
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/activity_marvin.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/activity_registrar.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/app_bar_main.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/app_bar_main_arrendador.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/app_bar_main_arrendatario.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/buscar_casa_fragment.xml" value="0.14349775784753363" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/content_main.xml" value="0.20677083333333332" />
+        <entry key="..\:/Android/RentApp/app/src/main/res/layout/content_main_arrendador.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/content_main_arrendatario.xml" value="0.20677083333333332" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/editar_usuario_fragment.xml" value="0.17040358744394618" />
         <entry key="..\:/Android/RentApp/app/src/main/res/layout/fragment_activity_main.xml" value="0.20677083333333332" />

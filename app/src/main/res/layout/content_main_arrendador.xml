@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_main_arrendatario">
+    tools:showIn="@layout/app_bar_main_arrendador">
     <fragment
-        android:id="@+id/nav_host_fragment_content_arrendatario"
+        android:id="@+id/nav_host_fragment_content_arrendador"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +15,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph = "@navigation/mobile_navigation" />
+        app:navGraph = "@navigation/mobile_navigation_arrendador" />
     <!--app:navGraph = "@navigation/mobile_navigation-->
     <!-- Este es el contenedor de main muy util por cierto-->
 </androidx.constraintlayout.widget.ConstraintLayout>
