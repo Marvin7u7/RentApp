@@ -26,7 +26,8 @@ class Arrendador : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout2
         val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        val navController = findNavController(R.id.nav_host_fragment_content_arrendador
+        )
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -45,12 +46,12 @@ class Arrendador : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        val navController = findNavController(R.id.nav_host_fragment_content_arrendador)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
     //abrir fragment para el menu 3 puntos
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
+        val navController = findNavController(R.id.nav_host_fragment_content_arrendador)
         when(item.itemId){
             R.id.nav_editar_usuario -> item.onNavDestinationSelected(navController)
         }
