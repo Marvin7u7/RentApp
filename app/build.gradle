@@ -63,5 +63,8 @@ dependencies {
 
     //Corrutinas
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0"
+
+    //COIL
+    implementation "io.coil-kt:coil:1.4.0"
 }
 

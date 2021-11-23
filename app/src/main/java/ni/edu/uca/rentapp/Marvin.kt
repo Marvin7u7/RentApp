@@ -5,13 +5,16 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.core.net.toUri
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.ui.*
+import ni.edu.uca.rentapp.EntidadesFrontend.usuarioS
 import ni.edu.uca.rentapp.R.id.nav_host_fragment_content_arrendatario
 import ni.edu.uca.rentapp.databinding.ActivityMarvinBinding
+import ni.edu.uca.rentapp.databinding.NavHeaderArrendatarioyarrendadorBinding
 
 class Marvin : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -27,6 +30,8 @@ class Marvin : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
+        val profileView = binding.navView.getHeaderView(0)
+        val headerBinding = NavHeaderArrendatarioyarrendadorBinding.bind(profileView)
         val navController = findNavController(nav_host_fragment_content_arrendatario)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -35,6 +40,11 @@ class Marvin : AppCompatActivity() {
                 R.id.nav_Inicio, R.id.nav_buscar_casa, R.id.nav_arrendatario, R.id.nav_usuario
             ), drawerLayout
         )
+
+        headerBinding.ivFotoPerfil.setImageURI(usuarioS.fotoPerfil.toUri())
+        headerBinding.tvNombreUsuario.text = usuarioS.nombre
+        headerBinding.tvCorreo.text = usuarioS.correo
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }

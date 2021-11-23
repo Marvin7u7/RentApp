@@ -1,11 +1,11 @@
 package ni.edu.uca.rentapp.Entidades
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
+import ni.edu.uca.rentapp.EntidadesFrontend.motorConversion
 
-@Database(entities = [usuario::class], version = 2, exportSchema = false)
+@Database(entities = [usuario::class], version = 4, exportSchema = false)
+@TypeConverters(motorConversion::class)
 abstract class appRoomDatabase: RoomDatabase() {
     abstract fun userDao(): usuarioDao
     companion object {

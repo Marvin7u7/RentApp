@@ -1,10 +1,12 @@
 package ni.edu.uca.rentapp
 
 import android.Manifest
+import android.R.attr
 import android.app.Activity.RESULT_OK
 import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
@@ -18,12 +20,27 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import ni.edu.uca.rentapp.Entidades.usuario
+import ni.edu.uca.rentapp.EntidadesFrontend.usuarioS
 import ni.edu.uca.rentapp.databinding.RegistrarUsuarioFragmentBinding
+import android.R.attr.data
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
+import android.media.ImageReader
+import androidx.lifecycle.lifecycleScope
+import coil.ImageLoader
+import coil.request.ImageRequest
+import coil.request.SuccessResult
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import ni.edu.uca.rentapp.EntidadesFrontend.motorConversion
+
 
 class RegistrarUsuario : Fragment() {
     private lateinit var binding: RegistrarUsuarioFragmentBinding
     var tipoU: String = ""
     var confirmPass: String = ""
+
     companion object {
         fun newInstance() = RegistrarUsuario()
     }
@@ -70,7 +87,8 @@ class RegistrarUsuario : Fragment() {
             binding.txtEmail.text.toString(),
             binding.txtNumeroCedula.text.toString(),
             confirmPass,
-            binding.txtTelefono.text.toString()
+            binding.txtTelefono.text.toString(),
+            foto.toString()
         )
     }
 
@@ -83,7 +101,8 @@ class RegistrarUsuario : Fragment() {
                 binding.txtEmail.text.toString(),
                 binding.txtNumeroCedula.text.toString(),
                 confirmPass,
-                binding.txtTelefono.text.toString()
+                binding.txtTelefono.text.toString(),
+                foto.toString()
             )
         }
     }
@@ -94,7 +113,7 @@ class RegistrarUsuario : Fragment() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
             when{
-                ContextCompat.checkSelfPermission(activity!!, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED -> {
+                ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED -> {
                     pickPhotoFromGallery()
                 }
                 else -> permiso.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
@@ -132,7 +151,7 @@ class RegistrarUsuario : Fragment() {
     private fun pedirPermiso() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             when{
-                ContextCompat.checkSelfPermission(activity!!, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED -> {
+                ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED -> {
                     dispatchTakePictureIntent()
                 }
                 else -> damePermi.launch(Manifest.permission.CAMERA)
@@ -145,7 +164,7 @@ class RegistrarUsuario : Fragment() {
     private fun dispatchTakePictureIntent() {
         val value = ContentValues()
         value.put(MediaStore.Images.Media.TITLE,"Nueva Imagen")
-        foto = activity!!.contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,value)
+        foto = requireActivity().contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,value)
         val camaraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
         camaraIntent.putExtra(MediaStore.EXTRA_OUTPUT,foto)
         starForActivityCamara.launch(camaraIntent)
@@ -171,6 +190,7 @@ class RegistrarUsuario : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         binding.btnGuardarUsuario.setOnClickListener {
+
             addNewUser()
             Toast.makeText(getActivity(), "Se ah registrado correctamete", Toast.LENGTH_LONG).show()
         }

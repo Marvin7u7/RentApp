@@ -1,8 +1,14 @@
 package ni.edu.uca.rentapp.Entidades
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
+import android.widget.ImageView
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.sql.Blob
 
 @Entity(tableName = "tblUsuario")
 data class usuario(
@@ -23,5 +29,7 @@ data class usuario(
     @ColumnInfo(name = "telefono")
     val telefono: String,
     @ColumnInfo(name = "casaFavorita")
-    val casaFav: Int
+    val casaFav: Int,
+    @ColumnInfo(name = "foto")
+    val foto: String
 )

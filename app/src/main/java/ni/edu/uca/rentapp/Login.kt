@@ -19,6 +19,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import ni.edu.uca.rentapp.EntidadesFrontend.usuarioS
 import java.lang.Exception
 import kotlin.math.sign
 
@@ -67,7 +68,15 @@ class Login : Fragment() {
                             if(objeto.tipoUsuario.equals("Arrendador")){
                                 lifecycleScope.launch(){
                                     withContext(Dispatchers.Main){
-                                        signal = true
+                                        //Asignando valores a entidad frontend
+                                        usuarioS.idUsuario = objeto.idUsuario
+                                        usuarioS.nombre = objeto.nombre
+                                        usuarioS.apellido = objeto.apellido
+                                        usuarioS.cedula = objeto.cedula
+                                        usuarioS.movil = objeto.telefono
+                                        usuarioS.correo = objeto.email
+                                        usuarioS.fotoPerfil = objeto.foto
+                                        //Iniciando otro activity
                                         val intent = Intent(activity, Arrendador()::class.java)
                                         startActivity(intent)
                                     }
@@ -75,7 +84,14 @@ class Login : Fragment() {
                             }else if(objeto.tipoUsuario.equals("Arrendatario")) {
                                 lifecycleScope.launch(){
                                     withContext(Dispatchers.Main){
-                                        signal = true
+                                        //Asignando valores a entidad frontend
+                                        usuarioS.idUsuario = objeto.idUsuario
+                                        usuarioS.nombre = objeto.nombre
+                                        usuarioS.apellido = objeto.apellido
+                                        usuarioS.cedula = objeto.cedula
+                                        usuarioS.movil = objeto.telefono
+                                        usuarioS.correo = objeto.email
+                                        usuarioS.fotoPerfil = objeto.foto
                                         val intent = Intent(activity, Marvin()::class.java)
                                         startActivity(intent)
                                     }

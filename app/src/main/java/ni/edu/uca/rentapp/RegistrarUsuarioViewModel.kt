@@ -1,5 +1,6 @@
 package ni.edu.uca.rentapp
 
+import android.graphics.Bitmap
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -24,7 +25,8 @@ class RegistrarUsuarioViewModel(private val usuarioD: usuarioDao) : ViewModel() 
         email: String,
         cedula: String,
         password: String,
-        telefono: String
+        telefono: String,
+        foto: String
     ): Boolean {
         if(nombre.isBlank() || apellido.isBlank() || tipoUsuario.isBlank() || email.isBlank() || cedula.isBlank() || password.isBlank() || telefono.isBlank()){
             return false
@@ -39,7 +41,8 @@ class RegistrarUsuarioViewModel(private val usuarioD: usuarioDao) : ViewModel() 
         email: String,
         cedula: String,
         password: String,
-        telefono: String
+        telefono: String,
+        foto: String
     ): usuario {
         return usuario(
             nombre = nombre,
@@ -49,7 +52,8 @@ class RegistrarUsuarioViewModel(private val usuarioD: usuarioDao) : ViewModel() 
             cedula = cedula,
             password = password,
             telefono = telefono,
-            casaFav = 0
+            casaFav = 0,
+            foto = foto
         )
     }
 
@@ -60,9 +64,10 @@ class RegistrarUsuarioViewModel(private val usuarioD: usuarioDao) : ViewModel() 
         email: String,
         cedula: String,
         password: String,
-        telefono: String
+        telefono: String,
+        foto: String
     ){
-        val newUser = getNewUserEntry(nombre, apellido, tipoUsuario, email, cedula, password, telefono)
+        val newUser = getNewUserEntry(nombre, apellido, tipoUsuario, email, cedula, password, telefono, foto)
         insertUsuario(newUser)
     }
 }
