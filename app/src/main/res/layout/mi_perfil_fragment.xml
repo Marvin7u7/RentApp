@@ -13,9 +13,12 @@
         android:layout_height="200dp"
         android:layout_margin="20dp"
         android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:src="@drawable/ic_baseline_people_24" />
 
     <TextView
@@ -34,11 +37,12 @@
         android:id="@+id/tvNombrePH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="@id/tvNombre"
         app:layout_constraintStart_toEndOf="@id/tvNombre"
-        app:layout_constraintTop_toTopOf="@id/tvNombre"
+        app:layout_constraintTop_toBottomOf="@+id/imgPFP"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="Kesha" />
 
     <TextView
@@ -64,92 +68,78 @@
         tools:text="Malyk" />
 
     <TextView
-        android:id="@+id/tvNacimiento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Fecha de nacimiento: "
-        android:fontFamily="sans-serif-black"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvApellido" />
-
-    <TextView
-        android:id="@+id/tvNacimientoPH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@id/tvNacimiento"
-        app:layout_constraintStart_toEndOf="@id/tvNacimiento"
-        app:layout_constraintTop_toTopOf="@id/tvNacimiento"
-        tools:text="12/11/2000" />
-
-    <TextView
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Email: "
+        android:layout_marginStart="20dp"
         android:fontFamily="sans-serif-black"
+        android:text="Email: "
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNacimiento" />
-
-    <TextView
-        android:id="@+id/tvEmailPH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@id/tvEmail"
-        app:layout_constraintStart_toEndOf="@id/tvEmail"
-        app:layout_constraintTop_toTopOf="@id/tvEmail"
-        tools:text="example@gmail.com" />
+        app:layout_constraintTop_toBottomOf="@+id/tvApellido" />
 
     <TextView
         android:id="@+id/tvMovil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Móvil: "
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="sans-serif-black"
+        android:text="Móvil: "
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvEmail" />
 
     <TextView
-        android:id="@+id/tvMovilPH"
+        android:id="@+id/tvEmailPH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="24dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@id/tvMovil"
-        app:layout_constraintStart_toEndOf="@id/tvMovil"
-        app:layout_constraintTop_toTopOf="@id/tvMovil"
-        tools:text="+505 89884532" />
+        app:layout_constraintBottom_toBottomOf="@id/tvEmail"
+        app:layout_constraintStart_toEndOf="@id/tvEmail"
+        app:layout_constraintTop_toTopOf="@id/tvEmail"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="example@gmail.com" />
+
+    <TextView
+        android:id="@+id/tvCedulaPH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@id/tvCedula"
+        app:layout_constraintStart_toEndOf="@id/tvCedula"
+        app:layout_constraintTop_toTopOf="@id/tvCedula"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="888-200201-100IH" />
 
     <TextView
         android:id="@+id/tvCedula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Cédula: "
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
+        android:text="Cédula: "
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvMovil" />
 
     <TextView
-        android:id="@+id/tvCedulaPH"
+        android:id="@+id/tvMovilPH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="24dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@id/tvCedula"
-        app:layout_constraintStart_toEndOf="@id/tvCedula"
-        app:layout_constraintTop_toTopOf="@id/tvCedula"
-        tools:text="888-200201-100IH" />
+        app:layout_constraintBottom_toBottomOf="@id/tvMovil"
+        app:layout_constraintStart_toEndOf="@id/tvMovil"
+        app:layout_constraintTop_toTopOf="@id/tvMovil"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="+505 89884532" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
