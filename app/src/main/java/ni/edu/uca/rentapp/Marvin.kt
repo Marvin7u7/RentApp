@@ -37,7 +37,7 @@ class Marvin : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_Inicio, R.id.nav_buscar_casa, R.id.nav_arrendatario, R.id.nav_usuario
+                R.id.nav_Inicio, R.id.nav_buscar_casa, R.id.nav_usuario, R.id.nav_miPerfil
             ), drawerLayout
         )
 

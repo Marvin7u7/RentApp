@@ -51,7 +51,7 @@ class Arrendador : AppCompatActivity() {
     //Menu 3 puntos
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
+        menuInflater.inflate(R.menu.menu_arrendador, menu)
         return true
     }
 
@@ -63,7 +63,7 @@ class Arrendador : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_arrendador)
         when(item.itemId){
-            R.id.nav_editar_usuario -> item.onNavDestinationSelected(navController)
+            R.id.navi_editar_usuario -> item.onNavDestinationSelected(navController)
         }
         return super.onOptionsItemSelected(item)
     }

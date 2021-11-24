@@ -12,15 +12,15 @@
             android:id="@+id/nav_buscar_casa"
             android:icon="@drawable/ic_baseline_search"
             android:title="@string/buscar_casa"/>
-
-        <item
-            android:id="@+id/nav_arrendatario"
-            android:icon="@drawable/ic_baseline_people_24"
-            android:title="@string/menu_arrendatario" />
         <item
             android:id="@+id/nav_usuario"
-            android:icon="@drawable/ic_baseline_verified_user_24"
-            android:title="@string/menu_usuario" />
+            android:icon="@drawable/ic_baseline_favorite_24"
+            android:title="@string/casas_favoritas" />
+        <item
+            android:id="@+id/nav_miPerfil"
+            android:icon="@drawable/ic_baseline_people_24"
+            android:title="@string/perfil_usuario" />
+
     </group>
 
     <!-- Aqui podemos añadir distintos grupos pro medio de los id

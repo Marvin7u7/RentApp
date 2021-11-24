@@ -15,4 +15,9 @@
         android:name="ni.edu.uca.rentapp.MiPerfil"
         android:label="Mi Perfil"
         tools:layout="@layout/mi_perfil_fragment" />
+    <fragment
+        android:id="@+id/navi_editar_usuario"
+        android:name="ni.edu.uca.rentapp.Interfaces.Usuario.edicionperfil.Editar_usuario"
+        android:label="Editar Perfil"
+        tools:layout="@layout/editar_usuario_fragment" />
 </navigation>
