@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerCasaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgCasa"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_baseline_home_24" />
+
+        <ImageView
+            android:id="@+id/fotoOwner"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgCasa"
+            tools:src="@drawable/ic_baseline_people_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/fotoOwner"
+            app:layout_constraintStart_toEndOf="@id/fotoOwner"
+            app:layout_constraintTop_toTopOf="@id/fotoOwner"
+            tools:text="Laura Shigihara" />
+
+        <ImageView
+            android:id="@+id/imgWa"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_wa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fotoOwner" />
+
+        <TextView
+            android:id="@+id/tvNumeroTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/imgWa"
+            app:layout_constraintStart_toEndOf="@id/imgWa"
+            app:layout_constraintTop_toTopOf="@id/imgWa"
+            tools:text="+505 87654321" />
+
+        <TextView
+            android:id="@+id/tvDescripcionTitle"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Descripción"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgWa" />
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescripcionTitle"
+            tools:text="Lorem ipsum dolor sit amet" />
+
+        <TextView
+            android:id="@+id/tvDireccionTitle"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Dirección"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescripcion" />
+
+        <TextView
+            android:id="@+id/tvDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDireccionTitle"
+            tools:text="Lorem ipsum dolor sit amet" />
+
+        <TextView
+            android:id="@+id/tvBathroomsTitle"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Cantidad de baños:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDireccion" />
+
+        <TextView
+            android:id="@+id/cantidadBathrooms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvBathroomsTitle"
+            app:layout_constraintStart_toEndOf="@id/tvBathroomsTitle"
+            app:layout_constraintTop_toTopOf="@id/tvBathroomsTitle"
+            tools:text="3 baños" />
+
+        <TextView
+            android:id="@+id/tvCuartosTitle"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Cantidad de cuartos:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvBathroomsTitle" />
+
+        <TextView
+            android:id="@+id/tvCantidadDeCuartos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvCuartosTitle"
+            app:layout_constraintStart_toEndOf="@id/tvCuartosTitle"
+            app:layout_constraintTop_toTopOf="@id/tvCuartosTitle"
+            tools:text="5 cuartos" />
+
+        <ImageView
+            android:id="@+id/imgPrecio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_money"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCuartosTitle" />
+
+        <TextView
+            android:id="@+id/textoTitle"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Precio:"
+            app:layout_constraintBottom_toBottomOf="@id/imgPrecio"
+            app:layout_constraintStart_toEndOf="@id/imgPrecio"
+            app:layout_constraintTop_toTopOf="@id/imgPrecio" />
+
+        <TextView
+            android:id="@+id/tvPrecioCasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/textoTitle"
+            app:layout_constraintStart_toEndOf="@id/textoTitle"
+            app:layout_constraintTop_toTopOf="@id/textoTitle"
+            tools:text="C$ 450000" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

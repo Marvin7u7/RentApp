@@ -82,6 +82,10 @@
         <entry key="..\:/Users/Marvi/Desktop/DAMO/RENTAPP/RentApp/app/src/main/res/menu/main.xml" value="0.2717948717948718" />
         <entry key="..\:/Users/Marvi/Desktop/DAMO/RENTAPP/RentApp/app/src/main/res/menu/main_arrendador_drawer.xml" value="0.2717948717948718" />
         <entry key="..\:/Users/Marvi/Desktop/DAMO/RENTAPP/RentApp/app/src/main/res/menu/main_drawer.xml" value="0.2717948717948718" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/buscar_casa_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/inmuebles_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/list_departamentos.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/ver_casa_fragment.xml" value="0.4" />
       </map>
     </option>
   </component>
