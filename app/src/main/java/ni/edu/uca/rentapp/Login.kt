@@ -52,7 +52,6 @@ class Login : Fragment() {
         return loginViewModel.isEntryValid(
             binding.txtCorreoElectronico.text.toString(),
             binding.txtPassword.text.toString(),
-
         )
     }
 
@@ -76,6 +75,7 @@ class Login : Fragment() {
                                         usuarioS.movil = objeto.telefono
                                         usuarioS.correo = objeto.email
                                         usuarioS.fotoPerfil = objeto.foto
+                                        usuarioS.tipoUsuario = objeto.tipoUsuario
                                         //Iniciando otro activity
                                         val intent = Intent(activity, Arrendador()::class.java)
                                         startActivity(intent)
@@ -92,6 +92,7 @@ class Login : Fragment() {
                                         usuarioS.movil = objeto.telefono
                                         usuarioS.correo = objeto.email
                                         usuarioS.fotoPerfil = objeto.foto
+                                        usuarioS.tipoUsuario = objeto.tipoUsuario
                                         val intent = Intent(activity, Marvin()::class.java)
                                         startActivity(intent)
                                     }

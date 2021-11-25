@@ -4,10 +4,11 @@ import android.content.Context
 import androidx.room.*
 import ni.edu.uca.rentapp.EntidadesFrontend.motorConversion
 
-@Database(entities = [usuario::class], version = 4, exportSchema = false)
+@Database(entities = [usuario::class, departamentos::class], version = 5, exportSchema = false)
 @TypeConverters(motorConversion::class)
 abstract class appRoomDatabase: RoomDatabase() {
     abstract fun userDao(): usuarioDao
+    abstract fun depsDao(): departamentoDao
     companion object {
         @Volatile
         private var INSTANCE: appRoomDatabase? = null

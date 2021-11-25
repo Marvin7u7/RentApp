@@ -92,7 +92,6 @@
                 android:textSize="20sp"/>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtContraseña"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -100,6 +99,7 @@
                 android:layout_marginRight="10dp"
                 app:endIconMode="password_toggle">
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Contraseña"
@@ -108,7 +108,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txtConfirmarContraseña"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -116,6 +115,7 @@
                 android:layout_marginRight="10dp"
                 app:endIconMode="password_toggle">
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtConfirmarPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Confirme su contraseña"
@@ -133,6 +133,7 @@
                 android:hint="Correo electrónico"
                 android:textSize="20sp" />
             <Button
+                android:id="@+id/btnEditar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"

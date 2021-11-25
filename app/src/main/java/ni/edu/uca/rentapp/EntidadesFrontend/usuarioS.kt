@@ -10,5 +10,5 @@ object usuarioS {
     var correo: String = ""
     var cedula: String = ""
     var movil: String = ""
-
+    var tipoUsuario: String = ""
 }

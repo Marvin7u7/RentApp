@@ -9,23 +9,45 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.navigation.NavigationView
+import ni.edu.uca.rentapp.EntidadesFrontend.usuarioS
+import ni.edu.uca.rentapp.R
+import ni.edu.uca.rentapp.RentAppAplication
+import ni.edu.uca.rentapp.databinding.ActivityArrendadorBinding
 import ni.edu.uca.rentapp.databinding.EditarUsuarioFragmentBinding
+import ni.edu.uca.rentapp.databinding.NavHeaderArrendatarioyarrendadorBinding
+import ni.edu.uca.rentapp.databinding.RegistrarUsuarioFragmentBinding
+
 
 class Editar_usuario : Fragment() {
+    private lateinit var binding: EditarUsuarioFragmentBinding
+    var confirmPass: String = ""
+    private val viewModelEdit: EditarUsuarioViewModel by activityViewModels{
+        EditarUsuarioViewModelFactory(
+            (activity?.application as RentAppAplication).database.userDao()
+        )
+    }
 
-    private lateinit var editarusuarioViewModel: EditarUsuarioViewModel
-    private var _binding: EditarUsuarioFragmentBinding? = null
+
+
     // This property is only valid between onCreateView and
     // onDestroyView.
-    private val binding get() = _binding!!
 
     val REQUEST_CAMERA = 1
     var foto : Uri? = null
@@ -35,18 +57,76 @@ class Editar_usuario : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        editarusuarioViewModel =
-            ViewModelProvider(this).get(EditarUsuarioViewModel::class.java)
+        binding = EditarUsuarioFragmentBinding.inflate(inflater, container, false)
 
-        _binding = EditarUsuarioFragmentBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        return root
+        with(binding){
+            txtNombre.setText(usuarioS.nombre)
+            txtApellido.setText(usuarioS.apellido)
+            txtCedula.setText(usuarioS.cedula)
+            txtMovil.setText(usuarioS.movil)
+            txtCorreoElectronico.setText(usuarioS.correo)
+            ivImagen.setImageURI(usuarioS.fotoPerfil.toUri())
+        }
+
+
+        return binding.root
+    }
+
+
+
+    private fun isEntryValid(): Boolean{
+        if(binding.txtPassword.text.toString().equals(binding.txtConfirmarPassword.text.toString())){
+            confirmPass = binding.txtConfirmarPassword.text.toString()
+        } else {
+            Toast.makeText(getActivity(), "Las contraseñas no coinciden.", Toast.LENGTH_SHORT).show()
+        }
+
+        Log.e("INFO isEntryValid:", binding.txtApellido.toString())
+
+        return viewModelEdit.isEntryValid(
+            usuarioS.idUsuario,
+            binding.txtNombre.text.toString(),
+            binding.txtApellido.text.toString(),
+            usuarioS.tipoUsuario,
+            binding.txtCorreoElectronico.text.toString(),
+            binding.txtCedula.text.toString(),
+            confirmPass,
+            binding.txtMovil.text.toString(),
+            foto.toString()
+        )
+
+    }
+
+    private fun refactorUser(){
+        if(isEntryValid()){
+            viewModelEdit.refactorUser(
+                usuarioS.idUsuario,
+                binding.txtNombre.text.toString(),
+                binding.txtApellido.text.toString(),
+                usuarioS.tipoUsuario,
+                binding.txtCorreoElectronico.text.toString(),
+                binding.txtCedula.text.toString(),
+                confirmPass,
+                binding.txtMovil.text.toString(),
+                foto.toString()
+            )
+            Log.e("INFO refactorUser:", binding.txtApellido.toString())
+            Toast.makeText(getActivity(), "Se edito correctamente!", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        binding.btnEditar.setOnClickListener {
+            refactorUser()
+        }
+        binding.btnseleccionarFoto.setOnClickListener(){requestPermissions()}
+        binding.btnTomarFoto.setOnClickListener(){pedirPermiso()}
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
     }
 
 
