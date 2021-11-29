@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/indigo"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/padding_high"
         tools:context=".Inmuebles">
 
         <TextView
@@ -16,6 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Pisos"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toBottomOf="@id/spinnerPisos"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Cuartos"
+            android:textColorHint="@color/black"
             android:id="@+id/layoutCuartos"
             android:layout_margin="20dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,8 +46,12 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtCuartos"
+                android:background="@drawable/edit_text_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/default_text_size"
+                android:backgroundTint="@color/cardview_shadow_start_color"
                 android:inputType="number"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -52,15 +61,23 @@
             android:layout_height="wrap_content"
             android:id="@+id/layoutBathroom"
             android:hint="Baños"
+            android:textColorHint="@color/black"
             android:layout_margin="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layoutCuartos"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/default_text_size"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtBath"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/default_text_size"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/cardview_shadow_start_color"
                 android:inputType="number"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -71,6 +88,7 @@
             android:id="@+id/layoutPrecioMes"
             android:hint="Precio por mes"
             app:suffixText="$"
+            android:textColorHint="@color/black"
             android:layout_margin="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layoutBathroom"
@@ -79,6 +97,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtPriceMonth"
                 android:layout_width="match_parent"
+                android:background="@drawable/edit_text_background"
+                android:backgroundTint="@color/cardview_shadow_start_color"
                 android:layout_height="wrap_content"
                 android:inputType="number"/>
 
@@ -90,6 +110,9 @@
             android:id="@+id/layoutDescripcion"
             android:hint="Descripción"
             android:layout_margin="20dp"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/default_text_size"
+            android:textColorHint="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layoutPrecioMes"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -97,6 +120,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtDescripG"
                 android:layout_width="match_parent"
+                android:background="@drawable/edit_text_background"
+                android:backgroundTint="@color/cardview_shadow_start_color"
+                android:textAlignment="viewStart"
                 android:layout_height="200dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -107,6 +133,7 @@
             android:id="@+id/layoutDescripcionBreve"
             android:hint="Descripción breve"
             android:layout_margin="20dp"
+            android:textColorHint="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/layoutDescripcion"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -114,7 +141,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtDescripB"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:textAlignment="viewStart"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -135,12 +165,14 @@
                 android:layout_weight="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnAgregarFotos"
             android:text="Agregar fotos"
+            android:layout_paddingStart="@dimen/padding_high"
             app:icon="@drawable/ic_baseline_photo_camera_24"
+            android:background="@drawable/button_background_alternate"
             android:layout_margin="20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/slDepartamento"/>
@@ -150,19 +182,21 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="20dp"
+            android:layout_marginStart="24dp"
+            android:scaleType="centerCrop"
+            android:background="@color/cardview_shadow_start_color"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnAgregarFotos"
-            android:scaleType="centerCrop"/>
+            app:layout_constraintTop_toBottomOf="@id/btnAgregarFotos" />
 
         <Button
             android:id="@+id/btnGuardar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
-            tools:layout_editor_absoluteX="159dp"
-            tools:layout_editor_absoluteY="919dp"
+            android:text="GUARDAR"
             app:layout_constraintTop_toBottomOf="@+id/ivFotoCasa"
             app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginBottom="@dimen/padding_high"
+            android:fontFamily="@font/palanquin_thin"
             app:layout_constraintRight_toRightOf="parent"
             />
 
@@ -173,6 +207,7 @@
             android:text="Cargar foto"
             app:layout_constraintBottom_toTopOf="@+id/ivFotoCasa"
             app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/button_background"
             app:layout_constraintStart_toEndOf="@+id/btnAgregarFotos"
             app:layout_constraintTop_toBottomOf="@+id/slDepartamento" />
 

@@ -17,8 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginBottom="@dimen/padding_higher">
-
-
         <LinearLayout
             app:layout_constraintTop_toBottomOf="@id/imgPFP"
             android:layout_height="wrap_content"
@@ -93,8 +91,7 @@
                 android:textAlignment="viewStart"
                 tools:text="Laplace"
                 android:layout_marginStart="@dimen/padding_standard"
-                android:layout_marginEnd="@dimen/padding_standard"
-                />
+                android:layout_marginEnd="@dimen/padding_standard" />
             <TextView
                 android:id="@+id/tvEmail"
                 android:layout_width="wrap_content"
