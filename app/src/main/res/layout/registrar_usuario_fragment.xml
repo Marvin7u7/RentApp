@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/indigo"
     tools:context=".RegistrarUsuario">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_standard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
@@ -19,154 +21,340 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imgFotoPerfil"
-                android:layout_width="247dp"
-                android:layout_height="227dp"
-                android:layout_marginLeft="75dp"
-                android:background="@drawable/ic_baseline_photo_camera_24" />
-
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/padding_standard"
+                android:layout_marginTop="@dimen/padding_half"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/anadir_foto_perfil"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_login_standard"
+                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/imgFotoPerfil"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/padding_half"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/teal_700"
+                android:background="@color/cardview_shadow_start_color"
+                android:layout_margin="@dimen/padding_standard"
+                android:src="@drawable/icon_camera" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_standard"
+                android:layout_marginStart="@dimen/padding_standard"
+                android:layout_marginEnd="@dimen/padding_standard"
                 android:orientation="horizontal">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnTomarFoto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background_alternate"
+                    android:fontFamily="@font/palanquin_thin"
                     android:text="Tomar Foto"
-                    android:textSize="18dp"
-                    app:cornerRadius="100dp"/>
+                    android:textColor="@color/teal_700"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnSeleccionarFoto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="@dimen/padding_half"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/palanquin_thin"
                     android:text="Seleccionar Foto"
-                    android:textSize="18dp"
-                    app:cornerRadius="100dp"/>
+                    android:backgroundTint="@color/teal_700"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/default_text_size"
+                    android:textStyle="bold" />
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/txtNombre"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp"
-                android:hint="Ingrese su nombre"
-                android:textAlignment="center"
-                android:textSize="25dp" />
 
-            <EditText
-                android:id="@+id/txtApellido"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp"
-                android:hint="Ingrese su apellido"
-                android:textAlignment="center"
-                android:textSize="25dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_half"
+                android:layout_marginEnd="@dimen/padding_half"
+                android:orientation="vertical">
 
-            <RadioGroup
-                android:id="@+id/OpcionesUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_high"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/Nombre"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/rbArrendatario"
+                <EditText
+                    android:id="@+id/txtNombre"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
+                    android:layout_height="@dimen/default_edit_text_size"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_half"
+                    android:layout_marginEnd="@dimen/padding_standard"
+                    android:background="@drawable/edit_text_background"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingStart="@dimen/padding_standard"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/anti_flash_white"
+                    android:textSize="@dimen/default_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_high"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/Apellido"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtApellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_edit_text_size"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_half"
+                    android:layout_marginEnd="@dimen/padding_standard"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="@dimen/padding_half"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/anti_flash_white"
+                    android:textSize="@dimen/default_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_high"
+                    android:fontFamily="@font/montserrat"
+                    android:text="¿Qué es lo que buscas?"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/OpcionesUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/padding_half"
+                    android:layout_marginRight="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rbArrendatario"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Busco alquilar o comprar un inmueble"
+                        android:textColor="@color/black"
+                        android:textColorLink="@color/anti_flash_white"
+                        android:textSize="@dimen/default_text_size"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbArrendador"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Busco ofrecer un inmueble en alquiler o venta"
+                        android:textColor="@color/black"
+                        android:textColorLink="@color/anti_flash_white"
+                        android:textSize="@dimen/default_text_size"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_high"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/correo_electronico"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_edit_text_size"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_half"
+                    android:layout_marginEnd="@dimen/padding_standard"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="@dimen/padding_standard"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/anti_flash_white"
+                    android:textSize="@dimen/default_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_high"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/cedula"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtNumeroCedula"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_edit_text_size"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_half"
+                    android:layout_marginEnd="@dimen/padding_standard"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="@dimen/padding_standard"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/anti_flash_white"
+                    android:textSize="@dimen/default_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_high"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Contraseña"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="Busco alquilar o comprar un inmueble" />
+                    android:layout_marginRight="10dp"
+                    android:textColorHint="@color/grey"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/anti_flash_white">
 
-                <RadioButton
-                    android:id="@+id/rbArrendador"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:text="Busco ofrecer en alquiler o venta un inmueble" />
-            </RadioGroup>
 
-            <EditText
-                android:id="@+id/txtEmail"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp"
-                android:hint="Ingrese su email"
-                android:textAlignment="center" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_background"
+                        android:fontFamily="@font/montserrat"
+                        android:hint="Ingrese su contraseña"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/padding_standard"
+                        android:textColor="@color/anti_flash_white"
+                        android:textColorHint="@color/anti_flash_white" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/txtNumeroCedula"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="25dp"
-                android:hint="Ingrese su numero de cedula"
-                android:textAlignment="center" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                app:endIconMode="password_toggle">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtPassword"
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Contraseña"
-                    android:background="@color/transparent"
-                    android:inputType="textPassword" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColorHint="@color/grey"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="@color/anti_flash_white">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                app:endIconMode="password_toggle">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtConfirmarPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/padding_standard"
+                        android:background="@drawable/edit_text_background"
+                        android:fontFamily="@font/montserrat"
+                        android:hint="Confirme su contraseña"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/padding_standard"
+                        android:textColor="@color/anti_flash_white"
+                        android:textSize="@dimen/default_text_size" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/txtConfirmarPassword"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Confirme su contraseña"
-                    android:background="@color/transparent"
-                    android:inputType="textPassword" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_gravity="start"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_high"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/numero_telefono"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/txtTelefono"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp"
-                android:hint="Numero de telefono"
-                android:inputType="number"
-                android:textAlignment="center" />
+                <EditText
+                    android:id="@+id/txtTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_edit_text_size"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginTop="@dimen/padding_half"
+                    android:layout_marginEnd="@dimen/padding_standard"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="@dimen/padding_standard"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/anti_flash_white"
+                    android:textSize="@dimen/default_text_size" />
 
-            <Button
-                android:id="@+id/btnGuardarUsuario"
-                android:layout_width="match_parent"
-                android:layout_height="71dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp"
-                android:text="Guardar"
-                app:cornerRadius="100dp"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnGuardarUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_main_button_size"
+                    android:layout_marginStart="@dimen/padding_higher"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/padding_higher_extra"
+                    android:layout_marginEnd="@dimen/padding_higher"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/padding_higher"
+                    android:background="@drawable/button_background"
+                    android:fontFamily="@font/palanquin_thin"
+                    android:text="Guardar"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

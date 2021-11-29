@@ -4,47 +4,114 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/indigo"
     tools:context=".Login">
 
-    <EditText
-        android:id="@+id/txtCorreoElectronico"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:hint="Ingrese su email"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.333" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/padding_higher">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/official_logo_rentapp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/padding_high"
+                android:src="@drawable/logo"
+                />
 
-    <EditText
-        android:id="@+id/txtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="8dp"
-        android:hint="Ingrese su contraseña"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCorreoElectronico"
-        app:layout_constraintVertical_bias="0.014" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/official_logo_rentapp"
+                android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnIniciarSesion"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Iniciar Sesión"
-        android:layout_marginTop="30dp"
-        app:cornerRadius="100dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/correo_electronico"
+                    android:layout_marginTop="@dimen/padding_high"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtCorreoElectronico"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_gravity="start"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/padding_half"
+                    android:layout_marginEnd="20dp"
+                    android:textStyle="italic"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingStart="@dimen/padding_standard"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/anti_flash_white"
+                    android:textSize="@dimen/default_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Contraseña"
+                    android:layout_marginTop="@dimen/padding_high"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_login_standard"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="@dimen/padding_half"
+                    android:inputType="textPassword"
+                    android:background="@drawable/edit_text_background"
+                    android:layout_marginStart="@dimen/padding_standard"
+                    android:layout_marginEnd="@dimen/padding_standard"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingStart="@dimen/padding_standard"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/anti_flash_white"
+                    android:textSize="@dimen/default_text_size"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCorreoElectronico" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnIniciarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/padding_higher"
+                    android:layout_marginEnd="@dimen/padding_higher"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/button_background"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_height="@dimen/default_main_button_size"
+                    android:textSize="@dimen/text_login_standard"
+                    android:layout_marginTop="@dimen/padding_higher"
+                    android:fontFamily="@font/palanquin_thin"
+                    android:layout_marginBottom="@dimen/padding_high"
+                    android:text="@string/iniciar_sesions"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

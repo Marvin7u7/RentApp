@@ -4,142 +4,184 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/indigo"
     tools:context=".MiPerfil"
-    android:id="@+id/VwProfile">
 
+    android:id="@+id/VwProfile">
     <ImageView
         android:id="@+id/imgPFP"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:layout_margin="20dp"
         android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/padding_higher"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:src="@drawable/ic_baseline_people_24" />
 
-    <TextView
-        android:id="@+id/tvNombre"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/imgPFP"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Nombre: "
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintEnd_toStartOf="@id/tvNombrePH"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgPFP" />
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/padding_standard"
+        android:layout_marginEnd="@dimen/padding_standard"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/padding_higher">
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginTop="@dimen/padding_high"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/Nombre"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_login_standard"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvNombrePH"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_profile"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="@dimen/padding_half"
+            android:fontFamily="@font/montserrat"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:textSize="20dp"
+            android:paddingStart="@dimen/padding_standard"
+            android:textColorHint="@color/grey"
+            android:textAlignment="viewStart"
+            tools:text="Laplace"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginEnd="@dimen/padding_standard"
+            />
+        <TextView
+            android:id="@+id/tvApellido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginTop="@dimen/padding_high"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/Apellido"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_login_standard"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvApellidoPH"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_profile"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="@dimen/padding_half"
+            android:fontFamily="@font/montserrat"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:textSize="20dp"
+            android:paddingStart="@dimen/padding_standard"
+            android:textColorHint="@color/grey"
+            android:textAlignment="viewStart"
+            tools:text="Laplace"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginEnd="@dimen/padding_standard"
+            />
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginTop="@dimen/padding_high"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/correo_electronico"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_login_standard"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tvNombrePH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@id/tvNombre"
-        app:layout_constraintStart_toEndOf="@id/tvNombre"
-        app:layout_constraintTop_toBottomOf="@+id/imgPFP"
-        app:layout_constraintVertical_bias="1.0"
-        tools:text="Kesha" />
+        <TextView
+            android:id="@+id/tvEmailPH"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_profile"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginTop="@dimen/padding_half"
+            android:layout_marginEnd="@dimen/padding_standard"
+            android:background="@drawable/edit_text_background"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:fontFamily="@font/montserrat"
+            android:paddingStart="@dimen/padding_standard"
+            android:textAlignment="viewStart"
+            android:textColorHint="@color/grey"
+            android:textSize="20dp"
+            tools:text="Laplace@gmail.com" />
 
-    <TextView
-        android:id="@+id/tvApellido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Apellido: "
-        android:fontFamily="sans-serif-black"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNombre" />
+        <TextView
+            android:id="@+id/tvMovil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginTop="@dimen/padding_high"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/movil"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_login_standard"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvMovilPH"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_profile"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="@dimen/padding_half"
+            android:fontFamily="@font/montserrat"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:textSize="20dp"
+            android:paddingStart="@dimen/padding_standard"
+            android:textColorHint="@color/grey"
+            android:textAlignment="viewStart"
+            tools:text="112984-23920"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginEnd="@dimen/padding_standard"
+            />
+        <TextView
+            android:id="@+id/tvCedula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginTop="@dimen/padding_high"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/cedula"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_login_standard"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvCedulaPH"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_text_profile"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginTop="@dimen/padding_half"
+            android:fontFamily="@font/montserrat"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:textSize="20dp"
+            android:paddingStart="@dimen/padding_standard"
+            android:textColorHint="@color/grey"
+            android:textAlignment="viewStart"
+            tools:text="112984-23920"
+            android:layout_marginStart="@dimen/padding_standard"
+            android:layout_marginEnd="@dimen/padding_standard"
+            />
 
-    <TextView
-        android:id="@+id/tvApellidoPH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@id/tvApellido"
-        app:layout_constraintStart_toEndOf="@id/tvApellido"
-        app:layout_constraintTop_toTopOf="@id/tvApellido"
-        tools:text="Malyk" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Email: "
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvApellido" />
 
-    <TextView
-        android:id="@+id/tvMovil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Móvil: "
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvEmail" />
-
-    <TextView
-        android:id="@+id/tvEmailPH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@id/tvEmail"
-        app:layout_constraintStart_toEndOf="@id/tvEmail"
-        app:layout_constraintTop_toTopOf="@id/tvEmail"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="example@gmail.com" />
-
-    <TextView
-        android:id="@+id/tvCedulaPH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@id/tvCedula"
-        app:layout_constraintStart_toEndOf="@id/tvCedula"
-        app:layout_constraintTop_toTopOf="@id/tvCedula"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="888-200201-100IH" />
-
-    <TextView
-        android:id="@+id/tvCedula"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-black"
-        android:text="Cédula: "
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvMovil" />
-
-    <TextView
-        android:id="@+id/tvMovilPH"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@id/tvMovil"
-        app:layout_constraintStart_toEndOf="@id/tvMovil"
-        app:layout_constraintTop_toTopOf="@id/tvMovil"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="+505 89884532" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

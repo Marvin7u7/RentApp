@@ -19,7 +19,16 @@
     <string name="casas_favoritas">Favoritos</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    
+    <string name="correo_electronico">Correo Electrónico</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Apellido">Apellido</string>
+    <string name="iniciar_sesions">Iniciar Sesión</string>
+    <string name="cedula">Cedula</string>
+    <string name="numero_telefono">Numero de Teléfono</string>
+    <string name="movil">Móvil</string>
+    <string name="anadir_foto_perfil">Añade una Foto de Perfil</string>
+    <string name="editar_foto_perfil">Edita tu Foto de Perfil</string>
+
     <string-array name="departamentos">
         <item>Chinandega</item>
         <item>León</item>
