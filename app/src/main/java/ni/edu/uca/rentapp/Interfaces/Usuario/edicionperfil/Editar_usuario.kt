@@ -93,7 +93,7 @@ class Editar_usuario : Fragment() {
             binding.txtCedula.text.toString(),
             confirmPass,
             binding.txtMovil.text.toString(),
-            foto.toString()
+            usuarioS.fotoPerfil
         )
 
     }
@@ -109,7 +109,7 @@ class Editar_usuario : Fragment() {
                 binding.txtCedula.text.toString(),
                 confirmPass,
                 binding.txtMovil.text.toString(),
-                foto.toString()
+                usuarioS.fotoPerfil
             )
             Log.e("INFO refactorUser:", binding.txtApellido.toString())
             Toast.makeText(getActivity(), "Se edito correctamente!", Toast.LENGTH_SHORT).show()
