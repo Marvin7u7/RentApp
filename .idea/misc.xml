@@ -26,6 +26,15 @@
         <entry key="..\:/Users/JonAreas/StudioProjects/RentApp/app/src/main/res/layout/nav_header_main.xml" value="0.1" />
         <entry key="..\:/Users/JonAreas/StudioProjects/RentApp/app/src/main/res/layout/registrar_usuario_fragment.xml" value="0.22333333333333336" />
         <entry key="..\:/Users/JonAreas/StudioProjects/RentApp/app/src/main/res/layout/ver_casa_fragment.xml" value="0.178125" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/buscar_casa_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/editar_casa_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/fragment_inicio.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/fragment_usuario.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/lista_casa.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/mis_casas_fragment.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/layout/ver_casa_fragment.xml" value="0.536" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/menu/main_activity_drawer.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/marco/Documents/RentApp/app/src/main/res/menu/main_drawer.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

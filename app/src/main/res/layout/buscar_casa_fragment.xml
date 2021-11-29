@@ -34,5 +34,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/slDepartamento"
-        tools:itemCount="20"/>
+        tools:itemCount="4"
+        tools:listitem="@layout/lista_casa"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
