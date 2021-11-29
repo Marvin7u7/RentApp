@@ -33,6 +33,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_login_standard"
                 android:textStyle="bold" />
+
             <ImageView
                 android:id="@+id/imgFotoPerfil"
                 android:layout_width="match_parent"
@@ -101,7 +102,7 @@
                     android:textSize="@dimen/text_login_standard"
                     android:textStyle="bold" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtNombre"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/default_edit_text_size"
@@ -130,7 +131,7 @@
                     android:textSize="@dimen/text_login_standard"
                     android:textStyle="bold" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtApellido"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/default_edit_text_size"
@@ -204,7 +205,7 @@
                     android:textSize="@dimen/text_login_standard"
                     android:textStyle="bold" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtEmail"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/default_edit_text_size"
@@ -213,6 +214,7 @@
                     android:layout_marginEnd="@dimen/padding_standard"
                     android:background="@drawable/edit_text_background"
                     android:paddingStart="@dimen/padding_standard"
+                    android:inputType="textEmailAddress"
                     android:singleLine="true"
                     android:textAlignment="viewStart"
                     android:textColor="@color/anti_flash_white"
@@ -232,7 +234,7 @@
                     android:textSize="@dimen/text_login_standard"
                     android:textStyle="bold" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtNumeroCedula"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/default_edit_text_size"
@@ -322,11 +324,12 @@
                     android:textSize="@dimen/text_login_standard"
                     android:textStyle="bold" />
 
-                <EditText
+                <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/txtTelefono"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/default_edit_text_size"
                     android:layout_marginStart="@dimen/padding_standard"
+                    android:inputType="numberSigned"
                     android:layout_marginTop="@dimen/padding_half"
                     android:layout_marginEnd="@dimen/padding_standard"
                     android:background="@drawable/edit_text_background"
