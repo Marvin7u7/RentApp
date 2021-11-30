@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "tblCasas")
-data class casas(
+data class Casa(
     @PrimaryKey(autoGenerate = true)
     val idCasa: Int = 0,
     @ColumnInfo(name = "pisos")

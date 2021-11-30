@@ -33,17 +33,17 @@
             android:textSize="20sp"
             android:textStyle="bold" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/tvDepartamento"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:layout_below="@id/tvDescripcionBreve"-->
-<!--            android:layout_toEndOf="@id/imagen_casa"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:text="Departamento Casa"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold" />-->
+        <TextView
+            android:id="@+id/tvDepartamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/tvDescripcionBreve"
+            android:layout_toEndOf="@id/imagen_casa"
+            android:layout_marginTop="10dp"
+            android:text="Departamento Casa"
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

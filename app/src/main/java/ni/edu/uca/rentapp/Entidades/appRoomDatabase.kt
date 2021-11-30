@@ -1,10 +1,13 @@
 package ni.edu.uca.rentapp.Entidades
 
 import android.content.Context
-import androidx.room.*
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import ni.edu.uca.rentapp.EntidadesFrontend.motorConversion
 
-@Database(entities = [usuario::class, departamentos::class, casas::class], version = 8, exportSchema = false)
+@Database(entities = [usuario::class, departamentos::class, Casa::class], version = 8, exportSchema = false)
 @TypeConverters(motorConversion::class)
 abstract class appRoomDatabase: RoomDatabase() {
     abstract fun userDao(): usuarioDao

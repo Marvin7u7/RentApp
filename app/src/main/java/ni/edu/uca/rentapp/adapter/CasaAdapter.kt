@@ -5,17 +5,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
-import ni.edu.uca.rentapp.Entidades.casas
+import ni.edu.uca.rentapp.Entidades.Casa
 import ni.edu.uca.rentapp.databinding.ListaCasaBinding
 
-class CasaAdapter(val context : Context, val dataset : List<casas>) :
+class CasaAdapter(val context : Context, val dataset : List<Casa>) :
     RecyclerView.Adapter<CasaAdapter.CasaViewHolder>() {
 
 
     inner class CasaViewHolder(private val itemCasaBinding: ListaCasaBinding)
         : RecyclerView.ViewHolder(itemCasaBinding.root) {
 
-        fun bind(casa : casas)
+        fun bind(casa : Casa)
         {
             with(itemCasaBinding) {
                 tvDescripcionBreve.text = casa.descripcionB

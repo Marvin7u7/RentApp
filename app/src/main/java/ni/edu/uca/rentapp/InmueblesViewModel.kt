@@ -13,7 +13,7 @@ class InmueblesViewModel(private val depDao: departamentoDao, private val casas:
         return depDao.seleccionarDepartamentos()
     }
 
-    private fun insertCasa(casa: casas){
+    private fun insertCasa(casa: Casa){
         viewModelScope.launch {
             Log.e("insertarCasaNoDao", casa.precioMes)
             casas.insertarCasa(casa)
@@ -60,9 +60,9 @@ class InmueblesViewModel(private val depDao: departamentoDao, private val casas:
         departamento: Int,
         foto: String,
         propietario: Int
-    ): casas {
+    ): Casa {
         Log.e("getNewEntryHouseBack", precioMes)
-        return casas(
+        return Casa(
             pisos = pisos,
             cuartos = cuartos,
             baños = baños,

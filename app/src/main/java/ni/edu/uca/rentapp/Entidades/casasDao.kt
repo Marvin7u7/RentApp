@@ -1,11 +1,15 @@
 package ni.edu.uca.rentapp.Entidades
-import androidx.room.*
+import androidx.lifecycle.LiveData
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
 
 @Dao
 interface casasDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertarCasa(casa: casas)
+    suspend fun insertarCasa(casa: Casa)
 
     @Query("SELECT * FROM tblCasas")
-    fun traerCasas(): List<casas>
+    fun traerCasas(): LiveData<List<Casa>>
 }

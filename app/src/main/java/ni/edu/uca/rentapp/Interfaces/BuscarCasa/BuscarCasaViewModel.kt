@@ -4,11 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import ni.edu.uca.rentapp.Entidades.casas
+import ni.edu.uca.rentapp.Entidades.Casa
 import ni.edu.uca.rentapp.Entidades.casasDao
-import ni.edu.uca.rentapp.Entidades.usuarioDao
-import ni.edu.uca.rentapp.LoginViewModel
-import java.lang.IllegalArgumentException
 
 class BuscarCasaViewModel(private val casa: casasDao) : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
@@ -16,9 +13,13 @@ class BuscarCasaViewModel(private val casa: casasDao) : ViewModel() {
     }
     val text: LiveData<String> = _text
 
-     fun seleccionarCasas(): List<casas>{
+     private fun seleccionarCasas(): LiveData<List<Casa>> {
         return casa.traerCasas()
     }
+
+    fun getAllCasas() = seleccionarCasas()
+
+
 }
 
 class BuscarCasaViewModelFactory(private val casa: casasDao): ViewModelProvider.Factory{
