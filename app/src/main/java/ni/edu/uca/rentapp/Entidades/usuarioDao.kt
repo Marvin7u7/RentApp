@@ -12,4 +12,7 @@ interface usuarioDao {
 
     @Query("SELECT * FROM tblUsuario WHERE email LIKE :emailI and password LIKE :passwordI")
     fun loginUsuario(emailI:String, passwordI: String): usuario
+
+    @Query("SELECT * FROM tblUsuario WHERE idUsuario = :id")
+    fun propietario(id: Int): usuario
 }

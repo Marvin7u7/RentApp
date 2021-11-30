@@ -13,12 +13,16 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import ni.edu.uca.rentapp.Entidades.usuario
 import ni.edu.uca.rentapp.databinding.VerCasaFragmentBinding
 
 class VerCasaFragment : Fragment() {
+    var idUser: Int = 0
 
     private val viewModel : VerCasaViewModel by activityViewModels {
-        VerCasaViewModelFactory((activity?.application as RentAppAplication).database.casaDao())
+        VerCasaViewModelFactory((activity?.application as RentAppAplication).database.casaDao(),
+            (activity?.application as RentAppAplication).database.userDao()
+        )
     }
 
 
@@ -47,6 +51,18 @@ class VerCasaFragment : Fragment() {
         return binding.root
     }
 
+
+    private fun isEntryValid(id: Int): Boolean{
+        return viewModel.isEntryValid(id)
+    }
+
+    private fun bringNewUser(id: Int): usuario{
+        if(isEntryValid(id)){
+            return viewModel.getUserById(id)
+        }
+        return viewModel.getUserById(id)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         var casaId = 0
@@ -60,6 +76,13 @@ class VerCasaFragment : Fragment() {
         lifecycleScope.launch(){
             withContext(Dispatchers.IO){
                 val clickCasa = viewModel.getCasaById(casaId)
+                idUser = clickCasa.propietario
+
+                isEntryValid(idUser)
+
+
+                val usuario = bringNewUser(idUser)
+
                 try {
                     lifecycleScope.launch(){
                         withContext(Dispatchers.Main){
@@ -69,6 +92,7 @@ class VerCasaFragment : Fragment() {
                                 tvBathroomsTitle.text = clickCasa.baños
                                 tvCuartosTitle.text = clickCasa.cuartos
                                 tvPrecioCasa.text = clickCasa.precioMes
+                                tvPropietario.text = usuario.nombre
                             }
                         }
                     }
