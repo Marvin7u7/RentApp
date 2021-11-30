@@ -28,7 +28,8 @@ class Login : Fragment() {
 
     private val loginViewModel: LoginViewModel by activityViewModels{
         LoginViewModelFactory(
-            (activity?.application as RentAppAplication).database.userDao()
+            (activity?.application as RentAppAplication).database.userDao(),
+            (activity?.application as RentAppAplication).database.depsDao()
         )
     }
     private lateinit var binding: LoginFragmentBinding
@@ -53,6 +54,21 @@ class Login : Fragment() {
             binding.txtCorreoElectronico.text.toString(),
             binding.txtPassword.text.toString(),
         )
+    }
+
+    fun insertarDepas(){
+        lifecycleScope.launch(){
+            withContext(Dispatchers.IO){
+                try {
+                    var lista = loginViewModel.bringDeps()
+                    if(lista.size == 0){
+                        loginViewModel.crearDepsFront()
+                    }
+                }catch (ex: Exception){
+                    Log.e("ERROR", ex.toString())
+                }
+            }
+        }
     }
 
 
@@ -115,6 +131,8 @@ class Login : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        insertarDepas()
+
         binding.btnIniciarSesion.setOnClickListener(){
             validar()
         }

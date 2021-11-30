@@ -6,11 +6,28 @@ import ni.edu.uca.rentapp.Entidades.usuarioDao
 import java.lang.IllegalArgumentException
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
+import ni.edu.uca.rentapp.Entidades.departamentoDao
 
 
-class LoginViewModel(private val usuarioD: usuarioDao) : ViewModel() {
+class LoginViewModel(private val usuarioD: usuarioDao, private val depas: departamentoDao) : ViewModel() {
     private fun searchByEP(email: String, password: String): usuario{
         return usuarioD.loginUsuario(email, password)
+    }
+
+    private fun createDeps(){
+        depas.crearDepas()
+    }
+
+    private fun verificarCantDeps(): List<String>{
+        return depas.verificarTabla()
+    }
+
+    fun bringDeps(): List<String> {
+        return verificarCantDeps()
+    }
+
+    fun crearDepsFront(){
+        createDeps()
     }
 
     fun isEntryValid(
@@ -31,11 +48,11 @@ class LoginViewModel(private val usuarioD: usuarioDao) : ViewModel() {
     }
 }
 
-class LoginViewModelFactory(private val usuarioD: usuarioDao): ViewModelProvider.Factory{
+class LoginViewModelFactory(private val usuarioD: usuarioDao, private val depas: departamentoDao): ViewModelProvider.Factory{
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if(modelClass.isAssignableFrom(LoginViewModel::class.java)){
             @Suppress("UNCHECKED_CAST")
-            return LoginViewModel(usuarioD) as T
+            return LoginViewModel(usuarioD, depas) as T
         }
         throw IllegalArgumentException("Unknown ViewModel Class")
     }
