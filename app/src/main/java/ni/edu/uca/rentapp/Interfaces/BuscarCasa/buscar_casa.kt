@@ -66,7 +66,7 @@ class buscar_casa : Fragment(), OnCasaViewHolderElementClick {
     }
 
     override fun onClick(casa: Casa) {
-            val action = buscar_casaDirections.actionNavBuscarCasaToVerCasaFragment(conceptId = casa.idCasa)
+            val action = buscar_casaDirections.actionNavBuscarCasaToVerCasaFragment(casaId = casa.idCasa)
 
             findNavController().navigate(action)
     }

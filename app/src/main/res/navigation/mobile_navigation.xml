@@ -49,7 +49,7 @@
             android:id="@+id/action_verCasaFragment_to_navigation_buscar_casa"
             app:destination="@id/navigation_buscar_casa" />
         <argument
-            android:name="conceptId"
+            android:name="casaId"
             app:argType="integer"
             android:defaultValue="1"/>
     </fragment>
