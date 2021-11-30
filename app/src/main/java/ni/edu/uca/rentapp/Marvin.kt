@@ -34,8 +34,7 @@ class Marvin : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_Inicio, R.id.navigation_buscar_casa, R.id.nav_usuario, R.id.nav_miPerfil
+            setOf(R.id.navigation_buscar_casa, R.id.nav_miPerfil
             ), drawerLayout
         )
 

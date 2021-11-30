@@ -5,17 +5,9 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_Inicio"
-            android:icon="@drawable/ic_baseline_home_24"
-            android:title="@string/menu_Inicio" />
-        <item
             android:id="@+id/navigation_buscar_casa"
             android:icon="@drawable/ic_baseline_search"
             android:title="@string/buscar_casa"/>
-        <item
-            android:id="@+id/nav_usuario"
-            android:icon="@drawable/ic_baseline_favorite_24"
-            android:title="@string/casas_favoritas" />
         <item
             android:id="@+id/nav_miPerfil"
             android:icon="@drawable/ic_baseline_people_24"
