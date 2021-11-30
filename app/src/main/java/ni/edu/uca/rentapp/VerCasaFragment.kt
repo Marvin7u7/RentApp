@@ -54,6 +54,7 @@ class VerCasaFragment : Fragment() {
             val safeArgs = VerCasaFragmentArgs.fromBundle(it)
             casaId = safeArgs.casaId
         }
+        Toast.makeText(getActivity(), "${casaId}", Toast.LENGTH_SHORT).show()
         //val clickedCasa = viewModel.getCasaById(argument.casaId)
 
         lifecycleScope.launch(){
@@ -69,7 +70,6 @@ class VerCasaFragment : Fragment() {
                                 tvCuartosTitle.text = clickCasa.cuartos
                                 tvPrecioCasa.text = clickCasa.precioMes
                             }
-                            Toast.makeText(getActivity(), "${argument.casaId}", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }catch (ex: Exception){
