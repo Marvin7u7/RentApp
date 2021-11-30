@@ -5,4 +5,7 @@ import androidx.room.*
 interface casasDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertarCasa(casa: casas)
+
+    @Query("SELECT * FROM tblCasas")
+    fun traerCasas(): List<casas>
 }

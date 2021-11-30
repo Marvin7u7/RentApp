@@ -30,10 +30,10 @@ class UsuarioFragment : Fragment() {
         _binding = FragmentUsuarioBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textUsuario
+        /*val textView: TextView = binding.txtUsuario
         usuarioViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
-        })
+        })*/
         return root
     }
 
