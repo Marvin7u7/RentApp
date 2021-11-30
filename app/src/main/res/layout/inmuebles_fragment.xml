@@ -170,7 +170,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnAgregarFotos"
             android:text="Agregar fotos"
-            android:layout_paddingStart="@dimen/padding_high"
             app:icon="@drawable/ic_baseline_photo_camera_24"
             android:background="@drawable/button_background_alternate"
             android:layout_margin="20dp"
