@@ -17,7 +17,11 @@ class BuscarCasaViewModel(private val casa: casasDao) : ViewModel() {
         return casa.traerCasas()
     }
 
+    private fun obtenerCasaPorId(id_casa : Int) : Casa = casa.obtenerCasaPorId(id_casa)
+
     fun getAllCasas() = seleccionarCasas()
+
+    fun getCasaById(id_casa : Int) = obtenerCasaPorId(id_casa)
 
 
 }

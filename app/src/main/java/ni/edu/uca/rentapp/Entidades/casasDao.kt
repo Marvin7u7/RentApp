@@ -12,4 +12,7 @@ interface casasDao {
 
     @Query("SELECT * FROM tblCasas")
     fun traerCasas(): LiveData<List<Casa>>
+
+    @Query("SELECT * FROM tblCasas where idCasa = :id_casa")
+    fun obtenerCasaPorId(id_casa : Int) : Casa
 }

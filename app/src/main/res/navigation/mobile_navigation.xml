@@ -44,5 +44,13 @@
         android:id="@+id/verCasaFragment"
         android:name="ni.edu.uca.rentapp.VerCasaFragment"
         android:label="ver_casa_fragment"
-        tools:layout="@layout/ver_casa_fragment" />
+        tools:layout="@layout/ver_casa_fragment" >
+        <action
+            android:id="@+id/action_verCasaFragment_to_navigation_buscar_casa"
+            app:destination="@id/navigation_buscar_casa" />
+        <argument
+            android:name="conceptId"
+            app:argType="integer"
+            android:defaultValue="1"/>
+    </fragment>
 </navigation>
