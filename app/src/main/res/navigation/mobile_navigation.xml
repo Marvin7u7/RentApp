@@ -22,13 +22,27 @@
         android:label="@string/Editar"
         tools:layout="@layout/editar_usuario_fragment" />
     <fragment
-        android:id="@+id/nav_buscar_casa"
+        android:id="@+id/navigation_buscar_casa"
         android:name="ni.edu.uca.rentapp.Interfaces.BuscarCasa.buscar_casa"
         android:label="@string/buscar_casa"
-        tools:layout="@layout/buscar_casa_fragment" />
+        tools:layout="@layout/buscar_casa_fragment" >
+        <action
+            android:id="@+id/action_nav_buscar_casa_to_verCasaFragment"
+            app:destination="@id/verCasaFragment"
+            />
+        <argument
+            android:name="casaId"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
     <fragment
         android:id="@+id/nav_miPerfil"
         android:name="ni.edu.uca.rentapp.MiPerfil"
         android:label="Perfil"
         tools:layout="@layout/mi_perfil_fragment" />
+    <fragment
+        android:id="@+id/verCasaFragment"
+        android:name="ni.edu.uca.rentapp.VerCasaFragment"
+        android:label="ver_casa_fragment"
+        tools:layout="@layout/ver_casa_fragment" />
 </navigation>

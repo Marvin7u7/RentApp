@@ -1,16 +1,14 @@
 package ni.edu.uca.rentapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.findNavController
 import androidx.navigation.ui.*
+import com.google.android.material.navigation.NavigationView
 import ni.edu.uca.rentapp.EntidadesFrontend.usuarioS
 import ni.edu.uca.rentapp.R.id.nav_host_fragment_content_arrendatario
 import ni.edu.uca.rentapp.databinding.ActivityMarvinBinding
@@ -37,7 +35,7 @@ class Marvin : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_Inicio, R.id.nav_buscar_casa, R.id.nav_usuario, R.id.nav_miPerfil
+                R.id.nav_Inicio, R.id.navigation_buscar_casa, R.id.nav_usuario, R.id.nav_miPerfil
             ), drawerLayout
         )
 

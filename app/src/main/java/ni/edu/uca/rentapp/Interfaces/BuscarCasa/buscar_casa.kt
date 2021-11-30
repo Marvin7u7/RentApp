@@ -6,13 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import ni.edu.uca.rentapp.Entidades.Casa
+import ni.edu.uca.rentapp.OnCasaViewHolderElementClick
 import ni.edu.uca.rentapp.R
 import ni.edu.uca.rentapp.RentAppAplication
 import ni.edu.uca.rentapp.adapter.CasaAdapter
 import ni.edu.uca.rentapp.databinding.BuscarCasaFragmentBinding
 
-class buscar_casa : Fragment() {
+class buscar_casa : Fragment(), OnCasaViewHolderElementClick {
     private val viewModel : BuscarCasaViewModel by activityViewModels {
         BuscarCasaViewModelFactory((activity?.application as RentAppAplication).database.casaDao())
     }
@@ -55,13 +58,17 @@ class buscar_casa : Fragment() {
                 binding.recyclerCasas.apply {
                     layoutManager = LinearLayoutManager(activity)
 
-                    adapter = CasaAdapter(this.context, casas)
+                    adapter = CasaAdapter(this.context, casas, this@buscar_casa)
                 }
             }
         }
 
+    }
 
+    override fun onClick(casa: Casa) {
+            val action = R.id.action_nav_buscar_casa_to_verCasaFragment
 
+            findNavController().navigate(action)
     }
 
 

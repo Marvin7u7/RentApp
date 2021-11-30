@@ -6,11 +6,11 @@ import android.view.ViewGroup
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import ni.edu.uca.rentapp.Entidades.Casa
+import ni.edu.uca.rentapp.OnCasaViewHolderElementClick
 import ni.edu.uca.rentapp.databinding.ListaCasaBinding
+class CasaAdapter(val context : Context, val dataset : List<Casa>, val eventoListener : OnCasaViewHolderElementClick) :
 
-class CasaAdapter(val context : Context, val dataset : List<Casa>) :
     RecyclerView.Adapter<CasaAdapter.CasaViewHolder>() {
-
 
     inner class CasaViewHolder(private val itemCasaBinding: ListaCasaBinding)
         : RecyclerView.ViewHolder(itemCasaBinding.root) {
@@ -20,6 +20,9 @@ class CasaAdapter(val context : Context, val dataset : List<Casa>) :
             with(itemCasaBinding) {
                 tvDescripcionBreve.text = casa.descripcionB
                 imagenCasa.setImageURI(casa.foto.toUri())
+            }
+            itemCasaBinding.root.setOnClickListener {
+                eventoListener.onClick(casa)
             }
         }
     }
