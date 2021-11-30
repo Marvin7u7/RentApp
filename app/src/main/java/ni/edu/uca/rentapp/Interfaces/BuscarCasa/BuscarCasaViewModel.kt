@@ -16,7 +16,7 @@ class BuscarCasaViewModel(private val casa: casasDao) : ViewModel() {
     }
     val text: LiveData<String> = _text
 
-    private fun seleccionarCasas(): List<casas>{
+     fun seleccionarCasas(): List<casas>{
         return casa.traerCasas()
     }
 }

@@ -7,7 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.LinearLayoutManager
 import ni.edu.uca.rentapp.R
+import ni.edu.uca.rentapp.adapter.CasaAdapter
 import ni.edu.uca.rentapp.databinding.BuscarCasaFragmentBinding
 
 class buscar_casa : Fragment() {
@@ -41,6 +44,15 @@ class buscar_casa : Fragment() {
         return root
     }
 
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.recyclerCasas.apply {
+            layoutManager = LinearLayoutManager(activity)
+            adapter = CasaAdapter(context, buscarcasaViewModel.seleccionarCasas())
+        }
+    }
 
 
 }
