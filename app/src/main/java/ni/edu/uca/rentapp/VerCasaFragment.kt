@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
@@ -58,13 +60,16 @@ class VerCasaFragment : Fragment() {
             withContext(Dispatchers.IO){
                 val clickCasa = viewModel.getCasaById(casaId)
                 try {
-                    if(clickCasa.idCasa != 0){
-                        lifecycleScope.launch(){
-                            withContext(Dispatchers.Main){
-                                with(binding) {
-                                    tvDescripcion.text = clickCasa.descripcionB
-                                }
+                    lifecycleScope.launch(){
+                        withContext(Dispatchers.Main){
+                            with(binding) {
+                                imgCasa.setImageURI(clickCasa.foto.toUri())
+                                tvDescripcion.text = clickCasa.descripcionB
+                                tvBathroomsTitle.text = clickCasa.baños
+                                tvCuartosTitle.text = clickCasa.cuartos
+                                tvPrecioCasa.text = clickCasa.precioMes
                             }
+                            Toast.makeText(getActivity(), "${argument.casaId}", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }catch (ex: Exception){
