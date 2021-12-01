@@ -59,9 +59,11 @@ class Login : Fragment() {
     fun insertarDepas(){
         lifecycleScope.launch(){
             withContext(Dispatchers.IO){
+                Log.e("ERROR", "insertarDepas")
                 try {
                     var lista = loginViewModel.bringDeps()
-                    if(lista.size == 0){
+                    if(lista == 0){
+                        Log.e("ERROR", "insertarDepasCondicional")
                         loginViewModel.crearDepsFront()
                     }
                 }catch (ex: Exception){

@@ -1,5 +1,6 @@
 package ni.edu.uca.rentapp
 
+import android.util.Log
 import androidx.lifecycle.*
 import ni.edu.uca.rentapp.Entidades.usuario
 import ni.edu.uca.rentapp.Entidades.usuarioDao
@@ -15,14 +16,16 @@ class LoginViewModel(private val usuarioD: usuarioDao, private val depas: depart
     }
 
     private fun createDeps(){
+        Log.e("ERROR", "Esta es la funcion createDeps")
         depas.crearDepas()
     }
 
-    private fun verificarCantDeps(): List<String>{
+    private fun verificarCantDeps(): Int{
         return depas.verificarTabla()
     }
 
-    fun bringDeps(): List<String> {
+    fun bringDeps(): Int {
+        Log.e("ERROR", "Esta es la funcion createDeps")
         return verificarCantDeps()
     }
 
