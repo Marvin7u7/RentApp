@@ -92,7 +92,7 @@ class VerCasaFragment : Fragment() {
                                 tvBathroomsTitle.text = clickCasa.baños
                                 tvCuartosTitle.text = clickCasa.cuartos
                                 tvPrecioCasa.text = clickCasa.precioMes
-                                tvPropietario.text = usuario.nombre
+                                tvPropietario.text = "Propietario: ${usuario.nombre}  Numero movil: ${usuario.telefono}"
                             }
                         }
                     }
